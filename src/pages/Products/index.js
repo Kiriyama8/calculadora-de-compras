@@ -23,17 +23,17 @@ function Products() {
     setProductList([...productList, { produto: "", preco: "", quantidade: "", total: "" }]);
   };
 
-  const calcularValorTotalDosProdutos = () => {
-    const valorTotal = productList.reduce((total, productList) => total + (productList.preco * productList.quantidade), 0);
-    const valorReal = formatarValorParaReal(valorTotal);
-    setPrecoTotal(valorReal);
-  }
-
   const formatarValorParaReal = (valor) => {  
     return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
   }
 
   useEffect(() => {
+    const calcularValorTotalDosProdutos = () => {
+      const valorTotal = productList.reduce((total, productList) => total + (productList.preco * productList.quantidade), 0);
+      const valorReal = formatarValorParaReal(valorTotal);
+      setPrecoTotal(valorReal);
+    }
+
     calcularValorTotalDosProdutos();
   }, [productList]);
 
