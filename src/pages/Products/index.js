@@ -58,7 +58,7 @@ function Products() {
                       autoComplete="off"
                       autoFocus
                     />
-                    <label>Produto</label>
+                    <label>Produto:</label>
                   </div>
                 </div>
                 <div className="col-6">
@@ -72,7 +72,7 @@ function Products() {
                       value={x.preco}
                       onChange={e => handleInputChange(e, i)}
                     />
-                    <label>Preço</label>
+                    <label>Preço:</label>
                   </div>
                 </div>
                 <div className="col-6">
@@ -86,7 +86,7 @@ function Products() {
                       value={x.quantidade}
                       onChange={e => handleInputChange(e, i)}
                     />
-                    <label>Quantidade</label>
+                    <label>Quantidade:</label>
                   </div>
                 </div>
                 <div className="col-12">
@@ -101,7 +101,7 @@ function Products() {
                       onChange={e => handleInputChange(e, i)}
                       disabled
                     />
-                    <label>Valor total do produto:</label>
+                    <label>Total produto:</label>
                   </div>
                 </div>
                 <div className="col-12 mt-3">
