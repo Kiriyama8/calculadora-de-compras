@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 function Products() {
-  const [productList, setProductList] = useState([{ nome: "", preco: "", quantidade: "", total: "" }]);
+  const [productList, setProductList] = useState([{ produto: "", preco: "", quantidade: "", total: "" }]);
   const [precoTotal, setPrecoTotal] = useState('');
 
   const handleInputChange = (e, index) => {
@@ -20,7 +20,7 @@ function Products() {
   };
 
   const handleAdicionarLinha = () => {
-    setProductList([...productList, { nome: "", preco: "", quantidade: "", total: "" }]);
+    setProductList([...productList, { produto: "", preco: "", quantidade: "", total: "" }]);
   };
 
   const calcularValorTotalDosProdutos = () => {
@@ -51,10 +51,12 @@ function Products() {
                       type="text" 
                       className="form-control" 
                       id="produto" 
-                      name="nome"
-                      placeholder="Nome"
-                      value={x.nome}
+                      name="produto"
+                      placeholder="Produto"
+                      value={x.produto}
                       onChange={e => handleInputChange(e, i)}
+                      autoComplete="off"
+                      autoFocus
                     />
                     <label>Produto</label>
                   </div>
