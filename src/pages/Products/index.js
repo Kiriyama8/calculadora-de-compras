@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 function Products() {
   const [productList, setProductList] = useState([{ nome: "", preco: "", quantidade: "", total: "" }]);
-  const [totalProduto, setTotalProduto] = useState('');
+  const [precoTotal, setPrecoTotal] = useState('');
 
   const handleInputChange = (e, index) => {
     const { name, value } = e.target;
@@ -26,7 +26,7 @@ function Products() {
   const calcularValorTotalDosProdutos = () => {
     const valorTotal = productList.reduce((total, productList) => total + (productList.preco * productList.quantidade), 0);
     const valorReal = formatarValorParaReal(valorTotal);
-    setTotalProduto(valorReal);
+    setPrecoTotal(valorReal);
   }
 
   const formatarValorParaReal = (valor) => {  
@@ -114,7 +114,7 @@ function Products() {
         );
       })}
       <div className="text-center mt-3">
-        <h1>Preço Total: {totalProduto}</h1>
+        <h1>Preço Total: {precoTotal}</h1>
       </div>
     </>
   );
