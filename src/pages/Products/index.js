@@ -116,8 +116,6 @@ function Products() {
       <div className="text-center mt-3">
         <h1>Preço Total: {totalProduto}</h1>
       </div>
-      {/* <div style={{ marginTop: 20 }}>{JSON.stringify(productList)}</div>
-      <div style={{ marginTop: 20 }}><h1>Preço total: <b>{totalProduto}</b></h1></div> */}
     </>
   );
 }
